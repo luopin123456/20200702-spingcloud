@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springcloud-service" />
+        <module name="20200702-springcloud-consumer7080" />
+        <module name="20200703-springcloud-zuul" />
+        <module name="springcloud-api" />
+        <module name="20200702-springcloud-consumer-ribbon7083" />
+        <module name="springcloud-mapper" />
+        <module name="20200702-springcloud-consumer-feign7082" />
+        <module name="springcluod-model" />
+        <module name="springcloud-eureka-6083" />
+        <module name="springcloud-eureka-6082" />
+        <module name="springcloud-eureka-6081" />
+        <module name="20200702-springcloud-provider8083" />
+        <module name="20200702-springcloud-provider8082" />
+        <module name="20200702-springcloud-provider8081" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="20200702-spingcloud" target="1.5" />
+      <module name="20200702-springcloud-consumer-feign7082" target="1.5" />
+      <module name="20200702-springcloud-consumer-ribbon7083" target="1.5" />
+      <module name="20200702-springcloud-consumer7080" target="1.5" />
+      <module name="20200702-springcloud-management" target="1.5" />
+      <module name="20200702-springcloud-provider8081" target="1.5" />
+      <module name="20200702-springcloud-provider8082" target="1.5" />
+      <module name="20200702-springcloud-provider8083" target="1.5" />
+      <module name="20200703-springcloud-zuul" target="1.5" />
+      <module name="springcloud-api" target="1.5" />
+      <module name="springcloud-eureka-6081" target="1.5" />
+      <module name="springcloud-eureka-6082" target="1.5" />
+      <module name="springcloud-eureka-6083" target="1.5" />
+      <module name="springcloud-eureke-management" target="1.5" />
+      <module name="springcloud-mapper" target="1.5" />
+      <module name="springcloud-service" target="1.5" />
+      <module name="springcluod-model" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

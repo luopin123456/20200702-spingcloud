@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.aaa</groupId>
+    <artifactId>20200702-spingcloud</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>20200702-springcloud-management</module>
+        <module>20200702-springcloud-provider8081</module>
+        <module>20200702-springcloud-consumer7080</module>
+        <module>springcloud-eureke-management</module>
+        <module>20200702-springcloud-provider8082</module>
+        <module>20200702-springcloud-provider8083</module>
+        <module>20200702-springcloud-consumer-feign7082</module>
+
+        <module>20200702-springcloud-consumer-ribbon7083</module>
+        <module>20200703-springcloud-zuul</module>
+
+
+    </modules>
+    <packaging>pom</packaging>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--
+
+                scope:jar包的生效时间
+                    runtime:当项目运行的时候该jar包会加载
+                    provided:在编译的时候这个jar包就会加载
+                    test:在测试阶段这个jar包会加载
+                        ( @Test:Junit4 )也就是说当扫描到Test注解存在的时候该jar包会加载
+                    import:当jar包会导入到项目中的时候就会立即加载
+
+                <type>pom</type>:
+                    标识了该jar包的类型(pom,jar,war)
+            -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.2.6.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR4</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.47</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.1.20</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.1.1</version>
+            </dependency>
+            <!--
+                fastjson包
+            -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>2.10.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>2.10.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>2.10.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.62</version>
+            </dependency>
+
+            <!-- joda time begin -->
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>2.10.5</version>
+            </dependency>
+            <!-- joda time end -->
+
+            <!--
+                @Data
+                @Id
+                @Generate
+                @Table
+                是JPA的注解
+            -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.10</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.persistence</groupId>
+                <artifactId>persistence-api</artifactId>
+                <version>1.0.2</version>
+            </dependency>
+            <dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin-server</artifactId>
+                <version>2.12.9</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin-autoconfigure-ui</artifactId>
+                <version>2.12.9</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
+                <version>2.3.0.RELEASE</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+</project>
